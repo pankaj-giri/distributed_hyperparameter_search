@@ -4,7 +4,7 @@ import tensorflow as tf
 from tensorflow.keras.optimizers import Adam
 
 def generate_hyperparameters():
-    return {'learning_rate': 10 ** np.random.uniform((-5, 5)),
+    return {'learning_rate': np.random.choice([0.001, 0.0001, 0.01]),
             'batch_size': np.random.randint(4, 16),
             'dropout': np.random.uniform(0, 1),
             'epochs' : np.random.randint(1,5)
