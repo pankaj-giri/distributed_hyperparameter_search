@@ -34,7 +34,7 @@ def train_cnn_and_compute_accuracy(hyperparameters,
     model.summary()
 
     history = model.fit(x=train_images, y=train_labels, epochs=hyperparameters['epochs'])
-    return history.history
+    return (hyperparameters, history.history)
 
 
 ray.init()
